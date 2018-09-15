@@ -152,7 +152,7 @@ The file has a <code>.rpm</code> and we must convert it to a ubuntu package (or 
      * Password: Input the password used in creating the user.
 
 3. Once connection is established, click Create a database named `EMPLOYEES` and run the following SQL command to Create a table:
-   
+   <pre>
     CREATE TABLE "USERNAME1"."EMP" 
     ("EMPNO" NUMBER NOT NULL ENABLE, 
     "ENAME" VARCHAR2(20 BYTE), 
