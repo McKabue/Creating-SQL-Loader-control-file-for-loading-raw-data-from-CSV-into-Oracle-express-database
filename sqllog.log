@@ -1,0 +1,58 @@
+
+SQL*Loader: Release 11.2.0.2.0 - Production on Fri Sep 14 02:37:22 2018
+
+Copyright (c) 1982, 2009, Oracle and/or its affiliates.  All rights reserved.
+
+Control File:   control.ctl
+Data File:      abc.csv
+  Bad File:     abc.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 256000 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table EMP, loaded from every logical record.
+Insert option in effect for this table: APPEND
+TRAILING NULLCOLS option in effect
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+EMPNO                               FIRST     *   ,  O(") CHARACTER            
+ENAME                                NEXT     *   ,  O(") CHARACTER            
+JOB                                  NEXT     *   ,  O(") CHARACTER            
+MGR                                  NEXT     *   ,  O(") CHARACTER            
+HIREDATE                             NEXT     *   ,  O(") DATE dd/mm/yyyy      
+SAL                                  NEXT     *   ,  O(") CHARACTER            
+COMM                                 NEXT     *   ,  O(") CHARACTER            
+DEPTNO                               NEXT     *   ,  O(") CHARACTER            
+
+Record 1: Rejected - Error on table EMP.
+ORA-00001: unique constraint (USERNAME1.EMP_PK) violated
+
+
+Table EMP:
+  1 Row successfully loaded.
+  1 Row not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                 132096 bytes(64 rows)
+Read   buffer bytes: 1048576
+
+Total logical records skipped:          0
+Total logical records read:             2
+Total logical records rejected:         1
+Total logical records discarded:        0
+
+Run began on Fri Sep 14 02:37:22 2018
+Run ended on Fri Sep 14 02:37:22 2018
+
+Elapsed time was:     00:00:00.04
+CPU time was:         00:00:00.01
